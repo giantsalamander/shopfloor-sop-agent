@@ -1,0 +1,5 @@
+step_id,param_name,setpoint,measured,unit,instrument_sn,instrument_model,timestamp,photo_path
+S1,insulation_voltage,12,12.4,V,FLK-87V-001,Fluke 87V,2026-09-29T09:10:00,panels/panel_ok.png
+S1,insulation_voltage,12,1250,V,TSC-DSO-22,Tek DSO,2026-09-29T09:12:00,panels/panel_overrange.png
+S1,insulation_voltage,12,12400,mV,FLK-87V-001,Fluke 87V,2026-09-29T09:13:00,panels/panel_wrongunit.png
+S2,torque,45,45.0,Nm,CDZ-1001,CD-1001TZ,2026-09-29T09:20:00,panels/panel_torque_ok.png

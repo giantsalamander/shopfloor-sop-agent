@@ -1,0 +1,5 @@
+instrument_sn,model,type,range_max,range_unit,cal_expiry
+FLK-87V-001,Fluke 87V,multimeter,1000,V,2027-01-24
+CDZ-1001,CD-1001TZ,torque_wrench,100,Nm,2026-11-25
+TSC-DSO-22,Tek DSO,oscilloscope,200,MHz,2026-08-27
+PT-100-T2,PT100,thermometer,400,C,2027-04-14

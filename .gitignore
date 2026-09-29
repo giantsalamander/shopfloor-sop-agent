@@ -1,0 +1,18 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# ---- 测试 / 冒烟痕迹（保留 B9db05c.json 作为实测证据）----
+reports/SMOKE*.json
+reports/BSMOKE*.json
+reports/RETEST*.json
+
+# ---- 模型检查点 / 缓存 ----
+checkpoints/
+
+# ---- 本地环境 ----
+.venv/
+venv/
+*.log
+.DS_Store

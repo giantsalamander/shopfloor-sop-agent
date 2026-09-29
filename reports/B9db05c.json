@@ -1,0 +1,237 @@
+{
+  "batch_id": "B9db05c",
+  "overall": "fail",
+  "findings": [
+    {
+      "step_id": "S1",
+      "criterion": "insulation_voltage=12V±5.0%",
+      "expected": "12",
+      "actual": "12.4",
+      "result": "pass",
+      "reference_page": "SOP S1",
+      "bbox": null,
+      "root_cause": null
+    },
+    {
+      "step_id": "S1",
+      "criterion": "insulation_voltage=12V±5.0%",
+      "expected": "12",
+      "actual": "1250",
+      "result": "fail",
+      "reference_page": "SOP S1",
+      "bbox": null,
+      "root_cause": "校准过期(2026-08-27)"
+    },
+    {
+      "step_id": "S1",
+      "criterion": "insulation_voltage=12mV±5.0%",
+      "expected": "12",
+      "actual": "12400",
+      "result": "fail",
+      "reference_page": "SOP S1",
+      "bbox": null,
+      "root_cause": "偏差103233.333%超公差5.0%"
+    },
+    {
+      "step_id": "S2",
+      "criterion": "torque=45Nm±5.0%",
+      "expected": "45",
+      "actual": "45.0",
+      "result": "pass",
+      "reference_page": "SOP S2",
+      "bbox": null,
+      "root_cause": null
+    }
+  ],
+  "worker_summary": "批次 B9db05c 检查结果：fail。共 4 项，不合格 2 项。",
+  "engineer_detail": "- [PASS] S1: insulation_voltage=12V±5.0% (期望 12 / 实际 12.4; 根因 None; 引用 SOP S1)\n- [FAIL] S1: insulation_voltage=12V±5.0% (期望 12 / 实际 1250; 根因 校准过期(2026-08-27); 引用 SOP S1)\n- [FAIL] S1: insulation_voltage=12mV±5.0% (期望 12 / 实际 12400; 根因 偏差103233.333%超公差5.0%; 引用 SOP S1)\n- [PASS] S2: torque=45Nm±5.0% (期望 45 / 实际 45.0; 根因 None; 引用 SOP S2)",
+  "audit_trace": [
+    {
+      "step": "InstrumentCheck",
+      "tool": "instrument_validator",
+      "args": {
+        "sn": "FLK-87V-001",
+        "req": {}
+      },
+      "result": {
+        "valid": true,
+        "reason": "OK",
+        "cal_expiry": "2027-01-24",
+        "model": "Fluke 87V",
+        "type": "multimeter"
+      },
+      "ts": "2026-09-27T07:33:32"
+    },
+    {
+      "step": "InstrumentCheck",
+      "tool": "instrument_validator",
+      "args": {
+        "sn": "TSC-DSO-22",
+        "req": {}
+      },
+      "result": {
+        "valid": false,
+        "reason": "校准过期(2026-08-27)",
+        "cal_expiry": "2026-08-27",
+        "model": "Tek DSO",
+        "type": "oscilloscope"
+      },
+      "ts": "2026-09-27T07:33:32"
+    },
+    {
+      "step": "InstrumentCheck",
+      "tool": "instrument_validator",
+      "args": {
+        "sn": "FLK-87V-001",
+        "req": {}
+      },
+      "result": {
+        "valid": true,
+        "reason": "OK",
+        "cal_expiry": "2027-01-24",
+        "model": "Fluke 87V",
+        "type": "multimeter"
+      },
+      "ts": "2026-09-27T07:33:32"
+    },
+    {
+      "step": "InstrumentCheck",
+      "tool": "instrument_validator",
+      "args": {
+        "sn": "CDZ-1001",
+        "req": {}
+      },
+      "result": {
+        "valid": true,
+        "reason": "OK",
+        "cal_expiry": "2026-11-25",
+        "model": "CD-1001TZ",
+        "type": "torque_wrench"
+      },
+      "ts": "2026-09-27T07:33:32"
+    },
+    {
+      "step": "Validate",
+      "tool": "tolerance_calc",
+      "args": {
+        "measured": 12.4,
+        "setpoint": "12"
+      },
+      "result": {
+        "deviation_value": 0.4,
+        "deviation_pct": 3.333,
+        "tolerance_pct": 5.0,
+        "in_tolerance": true,
+        "unit": "V"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "photo_evidence_check",
+      "args": {
+        "photo": "panels/panel_ok.png"
+      },
+      "result": {
+        "match": true,
+        "discrepancies": [],
+        "measured": 12.4,
+        "unit": "V"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "tolerance_calc",
+      "args": {
+        "measured": 1250.0,
+        "setpoint": "12"
+      },
+      "result": {
+        "deviation_value": 1238.0,
+        "deviation_pct": 10316.667,
+        "tolerance_pct": 5.0,
+        "in_tolerance": false,
+        "unit": "V"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "photo_evidence_check",
+      "args": {
+        "photo": "panels/panel_overrange.png"
+      },
+      "result": {
+        "match": false,
+        "discrepancies": [
+          "面板告警: ['red triangle icon']"
+        ],
+        "measured": 1250,
+        "unit": "V"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "tolerance_calc",
+      "args": {
+        "measured": 12400.0,
+        "setpoint": "12"
+      },
+      "result": {
+        "deviation_value": 12388.0,
+        "deviation_pct": 103233.333,
+        "tolerance_pct": 5.0,
+        "in_tolerance": false,
+        "unit": "mV"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "photo_evidence_check",
+      "args": {
+        "photo": "panels/panel_wrongunit.png"
+      },
+      "result": {
+        "match": true,
+        "discrepancies": [],
+        "measured": 12400,
+        "unit": "mV"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "tolerance_calc",
+      "args": {
+        "measured": 45.0,
+        "setpoint": "45"
+      },
+      "result": {
+        "deviation_value": 0.0,
+        "deviation_pct": 0.0,
+        "tolerance_pct": 5.0,
+        "in_tolerance": true,
+        "unit": "Nm"
+      },
+      "ts": "2026-09-27T07:33:33"
+    },
+    {
+      "step": "Validate",
+      "tool": "photo_evidence_check",
+      "args": {
+        "photo": "panels/panel_torque_ok.png"
+      },
+      "result": {
+        "match": true,
+        "discrepancies": [],
+        "measured": 45.0,
+        "unit": "Nm"
+      },
+      "ts": "2026-09-27T07:33:33"
+    }
+  ],
+  "generated_at": "2026-09-27T07:34:01"
+}

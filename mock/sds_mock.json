@@ -1,0 +1,26 @@
+{
+  "P_00001": {
+    "product_id": "P_00001",
+    "name": "乙醇溶液",
+    "hazard_class": "3",
+    "flash_point_c": 13.0
+  },
+  "P_00002": {
+    "product_id": "P_00002",
+    "name": "氢氧化钠",
+    "hazard_class": "8",
+    "flash_point_c": null
+  },
+  "P_00003": {
+    "product_id": "P_00003",
+    "name": "硝酸钠",
+    "hazard_class": "5.1",
+    "flash_point_c": null
+  },
+  "P_00004": {
+    "product_id": "P_00004",
+    "name": "锂电池组",
+    "hazard_class": "9",
+    "flash_point_c": null
+  }
+}
