@@ -118,6 +118,7 @@ python app.py
 ├── prep_vision.py       # 离线视觉预缓存(Step3-VL)
 ├── fix_vision_cache.py  # 视觉JSON修复(json_object 二次抽取)
 ├── docs/                # 项目说明/部署/技术栈/skills
+├── standards/           # 标准 PDF 示例(USB 3.2 CTS)
 ├── mock/                # 生成的演示数据
 ├── checkpoints/         # 每批次每步 checkpoint + vision_cache
 └── reports/             # 合规报告 JSON(含实测样例 B9db05c.json)
