@@ -117,7 +117,7 @@ python app.py
 ├── mock_gen.py          # mock 数据生成(仪器面板图/CSV/SDS)
 ├── prep_vision.py       # 离线视觉预缓存(Step3-VL)
 ├── fix_vision_cache.py  # 视觉JSON修复(json_object 二次抽取)
-├── docs/                # 项目说明/部署/技术栈/演示脚本/征文素材/skills
+├── docs/                # 项目说明/部署/技术栈/skills
 ├── mock/                # 生成的演示数据
 ├── checkpoints/         # 每批次每步 checkpoint + vision_cache
 └── reports/             # 合规报告 JSON(含实测样例 B9db05c.json)
@@ -128,8 +128,6 @@ python app.py
 - [项目说明（特点/亮点/技术方案/架构/优化）](docs/01-项目说明.md)
 - [部署说明（本地算力部署/大模型优化/Agent Skills 设计）](docs/02-部署说明.md)
 - [技术栈说明（NVIDIA SDK 与模型 / StepFun 模型）](docs/03-技术栈.md)
-- [演示视频脚本](docs/04-演示视频脚本.md)
-- [黑客松十日谈征文素材](docs/05-征文素材.md)
 - [Agent Skills 说明（10 个 md）](docs/skills/)
 
 ## License / 数据声明
